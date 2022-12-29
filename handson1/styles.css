@@ -1,0 +1,44 @@
+h1 {
+  color: red;
+}
+
+h3 {
+  color: red;
+  font-style: italic;
+}
+
+.ol {
+  color: purple;
+  line-height: 50px;
+}
+
+.ul {
+  color: purple;
+  letter-spacing: 8px;
+}
+
+p {
+  color: purple;
+}
+
+a {
+  background-color: yellow;
+  color: red;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#del {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.bg {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#und {
+  font-style: italic;
+  text-decoration: underline;
+}
