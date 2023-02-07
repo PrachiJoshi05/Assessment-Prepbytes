@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Array of Object</title>
+  </head>
+  <body>
+    <h3>
+      let studentRecords = [ {name: 'John', id: 123, marks : 98 }, <br />
+      {name: 'Baba', id: 101, marks : 23 }, <br />
+      {name: 'yaga', id: 200, marks : 45 },<br />
+      {name: 'Wick', id: 115, marks : 75 } ]
+    </h3>
+
+    <p>
+      Que1:"We are interested in retrieving only the students' names; all the
+      names should be in caps. ['JOHN', 'BABA', 'YAGA', 'WICK']"
+    </p>
+
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+let result=[];
+
+for(let i=0;i<studentRecords.length;i++)
+{
+result.push(studentRecords[i].name.toUpperCase());
+}
+
+console.log(result);
+</pre
+      >
+    </fieldset>
+
+    <p>
+      Que2:"Suppose we have the same dataset as above but this time we want to
+      get the details of students who scored more than 50 marks. [{name: 'John',
+      id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].marks>50)
+{
+console.log(studentRecords[i]);
+}
+}
+</pre
+      >
+    </fieldset>
+    <p>
+      Que3:Retrieve the details of students who scored more than 50 marks and
+      have IDs greater than 120.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].marks>50 && studentRecords[i].id>120)
+{
+console.log(studentRecords[i]);
+}
+}
+ </pre
+      >
+    </fieldset>
+    <p>
+      Que4:Consider the same scenario we have discussed above, but this time we
+      would like to know the sum total of the marks of the students.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+let result=0;
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].marks>50 && studentRecords[i].id>120)
+{
+result=result+studentRecords[i].marks;
+}
+}
+console.log(result);
+</pre
+      >
+    </fieldset>
+    <p>
+      Que5:This time we want to get only the names of the students who scored
+      more than 50 marks from the same dataset used above.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].marks>50)
+{
+console.log(studentRecords[i].name);
+}
+}
+ </pre
+      >
+    </fieldset>
+    <p>
+      Que6:This time we are required to print the sum of marks of the students
+      with id > 120.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+let result=0;
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].id>120)
+{
+result=result+studentRecords[i].marks;
+}
+}
+console.log(result);
+</pre
+      >
+    </fieldset>
+    <p>
+      Que7:This time we are required to print the total marks of the students
+      with marks greater than 50 after a grace of 15 marks has been added to
+      those students who scored less than 50.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+
+let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+{name: 'Baba', id: 101, marks : 23 },
+{name: 'yaga', id: 200, marks : 45 },
+{name: 'Wick', id: 115, marks : 75 } ] ;
+
+let result=0;
+
+for(let i=0;i<studentRecords.length;i++)
+{
+if(studentRecords[i].marks<50)
+{
+if(studentRecords[i].marks+15>50)
+{
+result=result+studentRecords[i].marks+15;
+}
+}
+}
+console.log(result);
+ </pre
+      >
+    </fieldset>
+    <p>
+      Que8:Create 6 objects , each object will have name, class, roll no as
+      properties. Store these objects in an array of objects.
+    </p>
+    <fieldset>
+      <pre>
+Ans:
+let ar=[];
+
+obj1={
+  name :"Prachi" ,
+  class : "js" ,
+  rollno : 1
+  }
+obj2={
+  name :"pankaj" ,
+  class : "css" ,
+  rollno : 2
+  }
+obj3={
+  name :"Sarthak" ,
+  class : "python" ,
+  rollno : 3
+  }
+obj4={
+  name :"Shree" ,
+  class : "java" ,
+  rollno : 4
+  }
+obj5={
+  name :"Neha" ,
+  class : "react" ,
+  rollno : 5
+  }
+obj6={
+  name :"Anamat" ,
+  class : "html" ,
+  rollno : 6
+  }
+
+ar.push(obj1);
+ar.push(obj2);
+ar.push(obj3);
+ar.push(obj4);
+ar.push(obj5);
+ar.push(obj6);
+
+console.log(ar);
+    </pre
+      >
+    </fieldset>
+  </body>
+</html>
