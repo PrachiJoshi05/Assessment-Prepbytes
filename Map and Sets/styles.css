@@ -1,0 +1,16 @@
+body {
+  font-size: 26px;
+  background-color: rgb(46, 56, 76);
+}
+h1 {
+  color: rgb(193, 83, 193);
+}
+
+p {
+  color: rgb(60, 181, 228);
+}
+
+fieldset {
+  background-color: rgb(222, 203, 222);
+  border: 2px solid purple;
+}
